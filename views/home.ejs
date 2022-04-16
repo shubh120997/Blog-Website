@@ -1,0 +1,19 @@
+<%- include("partials/header"); -%>
+
+<div id="content-wrap">
+  <p> <h5 style="color: #11D1CA;"> <%= content %> </h5>  </p>
+    <% posts.forEach(function(post){ %>
+    <h1> <%= post.title %> </h1>
+    <p>
+      <% if(post.content.length > 100){ %>
+      <%= post.content.substring(0,101) + " ..........." %>
+      <% } else { %>
+      <%= post.content %>
+      <% } %>
+      <a href="/posts/<%=post.title%>"> Read More </a>
+    </p>
+    <% }); %>
+
+
+</div>
+<%- include("partials/footer"); -%>
