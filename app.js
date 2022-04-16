@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(express.static("public"));
-mongoose.connect("mongodb://localhost:27017/blogDB");
+mongoose.connect("mongodb+srv://admin-shubham:Shub1997%40@cluster0.b7uqm.mongodb.net/blogDB");
 
 const homeStartingContent = "Use '+' in right corner for creating new post.";
 const aboutContent = "Create your own post using + in the right corner with 'Title' and 'Content' and Save here forever and Access whenever you want.";
